@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Main() {
   return (
@@ -17,12 +18,12 @@ function Main() {
                 You can focus on running your business while I focus on growing it.
               </p>
 
-              <a
-                href="contact.html"
+              <Link
+                to="/contact"
                 className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md mb-8"
               >
                 <span className="text-lg opacity-75">Get Started</span>
-              </a>
+              </Link>
 
               <div className="relative flex items-center my-4">
                 <div className="inline-block z-10 pl-2">
@@ -64,7 +65,7 @@ function Main() {
                 </div>
 
                 <div className="inline-block z-10 ml-2">
-                  <span className="font-bold">30+</span>
+                  <span className="font-bold">10+</span>
                   <span className="text-xs md:text-sm lg:text-base">Happy Clients</span>
                 </div>
 
@@ -428,10 +429,11 @@ function Main() {
           </div>
 
           <p className="text-xs text-center lg:text-base">
-            Hired by creative agencies and ambitious clients like{' '}
-            <span className="font-medium text-accent2">THORChain,</span>
+            <span className="font-medium text-accent2">Hired</span> by creative agencies and
+            ambitious <span className="font-medium text-accent2">clients</span>{' '}
+            {/* <span className="font-medium text-accent2">THORChain,</span>
             <span className="font-medium text-accent2">Illuvium</span>, and{' '}
-            <span className="font-medium text-accent2">Arsenal F.C.</span>
+            <span className="font-medium text-accent2">Arsenal F.C.</span> */}
           </p>
         </section>
 
@@ -452,12 +454,8 @@ function Main() {
               </div>{' '}
               Your Business
             </h2>
-            <p className="text-sm mt-5 md:mx-auto lg:text-md lg:mt-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida rhoncus volutpat
-              congue mattis sed mollis mollis.
-            </p>
 
-            <div className="text-left mt-10 grid gap-y-12 md:grid-cols-2 md:gap-x-12 md:px-4 lg:gap-x-20 lg:mt-16">
+            <div className="text-left mt-10 grid gap-y-12 md:grid-cols-2 md:gap-x-12 md:px-16 lg:gap-x-20 lg:mt-16">
               <div>
                 <div>
                   <svg
@@ -635,8 +633,7 @@ function Main() {
                 Several Projects I Enjoyed
               </h2>
               <p className="relative text-sm mx-auto mt-5 z-10 lg:mt-6 lg:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida rhoncus volutpat
-                congue mattis sed mollis mollis.
+                Here is a list of some projects, that really help my clients to grow their business.
               </p>
 
               <img
@@ -787,7 +784,7 @@ function Main() {
               <h2 className="pt-8 text-2xl font-bold text-center md:text-3xl lg:text-4xl lg:py-16">
                 What the{' '}
                 <div className="relative inline-block z-20">
-                  <div className="relative z-10">Experts</div>
+                  <div className="relative z-10">Clients</div>
                   <div className="absolute bottom-2 bg-accent h-3 w-full transform -rotate-3"></div>
                 </div>{' '}
                 are saying
@@ -797,12 +794,19 @@ function Main() {
                 <div className="py-24 relative z-20 md:px-20 md:pt-16 lg:flex lg:flex-wrap lg:max-w-screen lg:pt-8 lg:justify-center lg:gap-12">
                   <div className="relative border border-opacity-5 border-b-0 shadow-md mx-4 mb-24 grid grid-cols-8 px-4 py-8 bg-white md:mb-28 lg:px-12 lg:mb-0 lg:w-2/3 lg:max-w-lg lg:mx-0">
                     <p className="text-sm col-start-1 col-end-6 z-10 italic md:hidden lg:text-lg">
-                      “Lorem ipsum dolor sit amet, consem tetur adipiscing elit.“
+                      "My company is very happy with your work (
+                      <span className="font-medium text-accent2">Big Thanks</span> to you). You will
+                      be my
+                      <span className="font-medium text-accent2"> first choice</span> if you have
+                      time. And then only I will go to other developers."
                     </p>
 
                     <p className="text-sm col-start-1 col-end-6 z-10 italic hidden md:inline-block md:px-3 lg:text-lg">
-                      "Lorem ipsum dolor sit amet, consem tetur adipiscing elit. Neque egestas enim,
-                      porttitor sed a diam. Posuere ante faucibus tellus sed."
+                      "My company is very happy with your work (
+                      <span className="font-medium text-accent2">Big Thanks</span> to you). You will
+                      be my
+                      <span className="font-medium text-accent2"> first choice</span> if you have
+                      time. And then only I will go to other developers."
                     </p>
 
                     <div className="relative col-start-6 col-end-9 overflow-visible">
@@ -816,7 +820,7 @@ function Main() {
                     <div className="absolute w-full h-full overflow-hidden">
                       <img
                         className="relative w-32 top-5 -left-10"
-                        src={`${process.env.PUBLIC_URL}/assets/images/accent_bubble-4.svg`}
+                        src={`${process.env.PUBLIC_URL}/assets/images/accent_bubble-3.png`}
                         alt="Green decorative corner bubble"
                       />
                     </div>
@@ -824,12 +828,15 @@ function Main() {
 
                   <div className="relative border border-opacity-5 border-b-0 shadow-md mx-4 mb-24 grid grid-cols-8 px-4 py-8 bg-white md:mb-28 lg:px-12 lg:mb-0 lg:w-2/3 lg:max-w-lg lg:mx-0">
                     <p className="text-sm col-start-4 col-end-10 z-10 italic md:hidden lg:text-lg">
-                      “Lorem ipsum dolor sit amet, consem tetur adipiscing elit.“
+                      "Excellent work Zeeshan! Thank you so much for{' '}
+                      <span className="font-medium text-accent2"> solving my problem</span>. I was
+                      scratching my head to resolve this issue. You saved me."
                     </p>
 
                     <p className="text-sm col-start-4 col-end-10 z-10 italic hidden md:inline-block md:px-3 lg:text-lg">
-                      "Lorem ipsum dolor sit amet, consem tetur adipiscing elit. Neque egestas enim,
-                      porttitor sed a diam. Posuere ante faucibus tellus sed."
+                      "Excellent work Zeeshan! Thank you so much for{' '}
+                      <span className="font-medium text-accent2"> solving my problem</span>. I was
+                      scratching my head to resolve this issue. You saved me."
                     </p>
 
                     <div className="relative col-start-1 col-end-4 overflow-visible">
@@ -843,7 +850,7 @@ function Main() {
                     <div className="absolute w-full h-full overflow-hidden">
                       <img
                         className="absolute inline-block -top-20 -right-10 w-32"
-                        src={`${process.env.PUBLIC_URL}/assets/images/accent_bubble-4.svg`}
+                        src={`${process.env.PUBLIC_URL}/assets/images/accent_bubble-3.png`}
                         alt="Green decorative corner bubble"
                       />
                     </div>
@@ -851,12 +858,15 @@ function Main() {
 
                   <div className="relative border border-opacity-5 border-b-0 shadow-md mx-4 mb-24 grid grid-cols-8 px-4 py-8 bg-white md:mb-28 lg:px-12 lg:mb-0 lg:w-2/3 lg:max-w-lg lg:mx-0">
                     <p className="text-sm col-start-1 col-end-6 z-10 italic md:hidden lg:text-lg">
-                      “Lorem ipsum dolor sit amet, consem tetur adipiscing elit.“
+                      "Awesome...! It works like a charm. I am{' '}
+                      <span className="font-medium text-accent2"> 100% satisfied</span> with your
+                      work. I'll be more happy to work with you in near future."
                     </p>
 
                     <p className="text-sm col-start-1 col-end-6 z-10 italic hidden md:inline-block md:px-3 lg:text-lg">
-                      "Lorem ipsum dolor sit amet, consem tetur adipiscing elit. Neque egestas enim,
-                      porttitor sed a diam. Posuere ante faucibus tellus sed."
+                      "Awesome...! It works like a charm. I am{' '}
+                      <span className="font-medium text-accent2"> 100% satisfied</span> with your
+                      work. I'll be more happy to work with you in near future."
                     </p>
 
                     <div className="relative col-start-6 col-end-9 overflow-visible">
@@ -870,7 +880,7 @@ function Main() {
                     <div className="absolute w-full h-full overflow-hidden">
                       <img
                         className="relative w-32 -top-10 -left-10 transform rotate-270"
-                        src={`${process.env.PUBLIC_URL}/assets/images/accent_bubble-4.svg`}
+                        src={`${process.env.PUBLIC_URL}/assets/images/accent_bubble-3.png`}
                         alt="Green decorative corner bubble"
                       />
                     </div>
