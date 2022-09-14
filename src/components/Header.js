@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
   const location = useLocation();
   const isHomePage = location?.pathname === '/' ? true : false;
+
+  useEffect(() => {
+    (function buttonControlInit() {
+      const navOpen = document.querySelector('#nav_open');
+      const navClose = document.querySelector('#nav_close');
+      const navContent = document.querySelector('#nav_content');
+
+      // Toggles menu depending on id of event target ("nav_open" or "nav_close")
+      function toggleNav(e) {
+        if (e.target.id === 'nav_open') {
+          navContent.classList.add('right-0');
+          navContent.classList.remove('right-full');
+        } else {
+          navContent.classList.remove('right-0');
+          navContent.classList.add('right-full');
+        }
+      }
+
+      [navOpen, navClose].map((button) => button.addEventListener('click', toggleNav));
+    })();
+  }, []);
+
   return (
     <div>
-      {/* <nav
+      <nav
         role="navigation"
         className="sticky flex justify-between items-center top-0 px-4 bg-white z-40 border-b border-gray-5 border-opacity-5 shadow-sm md:hidden py-3"
       >
@@ -22,15 +44,15 @@ function Header() {
             >
               <title>FTM Logo</title>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M29.3235 16.8328C29.1582 19.1573 29.0137 22.0352 27.0771 23.3267C25.0095 24.7056 22.1351 22.5016 19.7555 23.2137C17.7533 23.8129 16.9586 27.0745 14.8716 26.9794C12.8414 26.8869 12.0663 24.178 10.5749 22.7954C9.24317 21.561 7.70495 20.6661 6.54936 19.2648C5.04642 17.4423 3.09917 15.7305 2.81316 13.3833C2.51302 10.9201 3.36085 8.2717 4.98102 6.39379C6.57907 4.54153 9.21741 4.19227 11.4989 3.31587C13.7168 2.46388 13.4649 2.04997 15.661 2.9545C18.0017 3.91857 19.5183 6.88348 22.5528 7.12233C24.164 8.60452 26.6463 8.59899 28.0023 10.3186C29.3969 12.087 29.4834 14.584 29.3235 16.8328Z"
                 fill="black"
-                fill-opacity="0.42"
+                fillOpacity="0.42"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M27.1993 15.5102C27.034 17.8347 26.8895 20.7127 24.9529 22.0042C22.8853 23.3831 20.0109 21.179 17.6313 21.8911C15.6291 22.4903 14.8345 25.7519 12.7474 25.6568C10.7172 25.5643 9.94209 22.8554 8.45067 21.4729C7.11898 20.2384 5.58075 19.3436 4.42517 17.9422C2.92223 16.1197 2.15777 13.3114 1.87177 10.9642C1.57162 8.50096 2.805 7.67767 4.42517 5.79976C6.02321 3.94749 7.09322 2.86969 9.37468 1.99329C11.5926 1.14131 13.9364 1.08875 16.1326 1.99329C18.4733 2.95735 18.5646 4.08493 20.4286 5.79975C22.0398 7.28194 24.5221 7.27642 25.8781 8.99599C27.2727 10.7644 27.3592 13.2614 27.1993 15.5102Z"
                 fill="#0CFAB7"
               />
@@ -55,23 +77,23 @@ function Header() {
             <path
               d="M1.97498 1.97498H17.975"
               stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M1.97498 7.97498H17.975"
               stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M1.97498 13.975H17.975"
               stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>
@@ -93,15 +115,15 @@ function Header() {
                 >
                   <title>FTM Logo</title>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M29.3235 16.8328C29.1582 19.1573 29.0137 22.0352 27.0771 23.3267C25.0095 24.7056 22.1351 22.5016 19.7555 23.2137C17.7533 23.8129 16.9586 27.0745 14.8716 26.9794C12.8414 26.8869 12.0663 24.178 10.5749 22.7954C9.24317 21.561 7.70495 20.6661 6.54936 19.2648C5.04642 17.4423 3.09917 15.7305 2.81316 13.3833C2.51302 10.9201 3.36085 8.2717 4.98102 6.39379C6.57907 4.54153 9.21741 4.19227 11.4989 3.31587C13.7168 2.46388 13.4649 2.04997 15.661 2.9545C18.0017 3.91857 19.5183 6.88348 22.5528 7.12233C24.164 8.60452 26.6463 8.59899 28.0023 10.3186C29.3969 12.087 29.4834 14.584 29.3235 16.8328Z"
                     fill="black"
-                    fill-opacity="0.42"
+                    fillOpacity="0.42"
                   />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M27.1993 15.5102C27.034 17.8347 26.8895 20.7127 24.9529 22.0042C22.8853 23.3831 20.0109 21.179 17.6313 21.8911C15.6291 22.4903 14.8345 25.7519 12.7474 25.6568C10.7172 25.5643 9.94209 22.8554 8.45067 21.4729C7.11898 20.2384 5.58075 19.3436 4.42517 17.9422C2.92223 16.1197 2.15777 13.3114 1.87177 10.9642C1.57162 8.50096 2.805 7.67767 4.42517 5.79976C6.02321 3.94749 7.09322 2.86969 9.37468 1.99329C11.5926 1.14131 13.9364 1.08875 16.1326 1.99329C18.4733 2.95735 18.5646 4.08493 20.4286 5.79975C22.0398 7.28194 24.5221 7.27642 25.8781 8.99599C27.2727 10.7644 27.3592 13.2614 27.1993 15.5102Z"
                     fill="#0CFAB7"
                   />
@@ -128,8 +150,8 @@ function Header() {
                 <path
                   d="M15 15L1 1M1 15L15 1L1 15Z"
                   stroke="#e0082d"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </button>
@@ -210,17 +232,17 @@ function Header() {
 
               <img
                 className="absolute transform scale-150 top-20 z-0"
-                src="images/accent_bubble-contact.png"
+                src={`${process.env.PUBLIC_URL}/assets/images/accent_bubble-contact.png`}
                 alt="Green decorative background"
               />
             </div>
           </div>
         </ul>
-      </nav> */}
+      </nav>
 
       <nav
         role="navigation"
-        className="px-8 md:flex md:justify-center md:gap-x-32 md:mt-4 xl:max-w-screen-2xl xl:mx-auto"
+        className="hidden px-8 md:flex md:justify-center md:gap-x-32 md:mt-4 xl:max-w-screen-2xl xl:mx-auto"
       >
         <div>
           <Link to="/" className="inline-block h-full w-full">
@@ -234,15 +256,15 @@ function Header() {
             >
               <title>FTM Logo</title>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M29.3235 16.8328C29.1582 19.1573 29.0137 22.0352 27.0771 23.3267C25.0095 24.7056 22.1351 22.5016 19.7555 23.2137C17.7533 23.8129 16.9586 27.0745 14.8716 26.9794C12.8414 26.8869 12.0663 24.178 10.5749 22.7954C9.24317 21.561 7.70495 20.6661 6.54936 19.2648C5.04642 17.4423 3.09917 15.7305 2.81316 13.3833C2.51302 10.9201 3.36085 8.2717 4.98102 6.39379C6.57907 4.54153 9.21741 4.19227 11.4989 3.31587C13.7168 2.46388 13.4649 2.04997 15.661 2.9545C18.0017 3.91857 19.5183 6.88348 22.5528 7.12233C24.164 8.60452 26.6463 8.59899 28.0023 10.3186C29.3969 12.087 29.4834 14.584 29.3235 16.8328Z"
                 fill="black"
-                fill-opacity="0.42"
+                fillOpacity="0.42"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M27.1993 15.5102C27.034 17.8347 26.8895 20.7127 24.9529 22.0042C22.8853 23.3831 20.0109 21.179 17.6313 21.8911C15.6291 22.4903 14.8345 25.7519 12.7474 25.6568C10.7172 25.5643 9.94209 22.8554 8.45067 21.4729C7.11898 20.2384 5.58075 19.3436 4.42517 17.9422C2.92223 16.1197 2.15777 13.3114 1.87177 10.9642C1.57162 8.50096 2.805 7.67767 4.42517 5.79976C6.02321 3.94749 7.09322 2.86969 9.37468 1.99329C11.5926 1.14131 13.9364 1.08875 16.1326 1.99329C18.4733 2.95735 18.5646 4.08493 20.4286 5.79975C22.0398 7.28194 24.5221 7.27642 25.8781 8.99599C27.2727 10.7644 27.3592 13.2614 27.1993 15.5102Z"
                 fill="#0CFAB7"
               />
