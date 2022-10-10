@@ -1,12 +1,17 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function Footer() {
+
+  const location = useLocation();
+  const isHomePage = location?.pathname === '/' ? true : false;
+
   return (
     <div>
       <footer className="relative z-20 flex flex-col items-center justify-between px-4 pt-6 bg-white md:pt-4 lg:bg-gray-100 lg:shadow-inner">
         <div className="text-sm list-none w-full max-w-screen-xl md:flex md:flex-row md:justify-between md:items-center md:pb-8 gap-x-8 opacity-75 lg:gap-x-16">
           <div className="md:mt-2 mb-4 lg:mt-6 lg:mb-8">
-            <a href="/">
+            <Link to="/">
               <svg
                 className="w-16 lg:w-24"
                 width="83"
@@ -34,49 +39,53 @@ function Footer() {
                   fill="#777676"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-col justify-left max-w-max gap-y-2 md:gap-y-0 md:flex-row md:gap-x-12">
             <div className="inline-block relative">
               <li className="relative z-10 text-sm font-medium lg:text-base lg:font-normal lg:hover:underline">
-                <a href="services.html" className="inline-block h-full w-full">
+                <Link to="/services" className="inline-block h-full w-full">
                   Services
-                </a>
+                </Link>
               </li>
               <div className="absolute bottom-0 h-1 w-full bg-accent hidden md:absolute lg:hidden"></div>
             </div>
 
             <div className="inline-block relative">
               <li className="relative z-10 text-sm font-medium lg:text-base lg:font-normal lg:hover:underline">
-                <a href="index.html#testimonials" className="inline-block h-full w-full">
+              {isHomePage && (
+                <a href="#testimonials" className="inline-block h-full w-full">
                   Testimonials
                 </a>
+              )}
               </li>
               <div className="absolute bottom-0 h-1 w-full bg-accent hidden md:absolute lg:hidden"></div>
             </div>
 
             <div className="inline-block relative">
               <li className="relative z-10 text-sm font-medium lg:text-base lg:font-normal lg:hover:underline">
-                <a href="index.html#experience" className="inline-block h-full w-full">
+              {isHomePage && (
+                <a href="#experience" className="inline-block h-full w-full">
                   Experience
                 </a>
+              )}
               </li>
               <div className="absolute bottom-0 h-1 w-full bg-accent hidden md:absolute lg:hidden"></div>
             </div>
 
             <div className="inline-block relative">
               <li className="relative z-10 text-sm font-medium lg:text-base lg:font-normal lg:hover:underline">
-                <a href="contact.html" className="inline-block h-full w-full">
+                <Link to="/contact" className="inline-block h-full w-full">
                   Contact
-                </a>
+                </Link>
               </li>
               <div className="absolute bottom-0 h-1 w-full bg-accent hidden md:absolute lg:hidden"></div>
             </div>
           </div>
 
           <div className="flex opacity-75 mt-2 mb-2 justify-end md:gap-x-2 md:mt-0 md:mb-0">
-            <a href="#" className="p-2 pl-0 inline-block md:pb-0">
+            <Link to="#" className="p-2 pl-0 inline-block md:pb-0">
               <svg
                 className="w-4"
                 width="24"
@@ -91,8 +100,8 @@ function Footer() {
                   fill="black"
                 />
               </svg>
-            </a>
-            <a href="#" className="p-2 inline-block md:pb-0">
+            </Link>
+            <Link to="#" className="p-2 inline-block md:pb-0">
               <svg
                 className="w-4"
                 width="24"
@@ -107,9 +116,9 @@ function Footer() {
                   fill="black"
                 />
               </svg>
-            </a>
+            </Link>
 
-            <a href="#" className="p-2 inline-block md:pb-0 md:pr-0">
+            <Link to="#" className="p-2 inline-block md:pb-0 md:pr-0">
               <svg
                 className="w-4"
                 width="24"
@@ -124,14 +133,14 @@ function Footer() {
                   fill="black"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="flex flex-col items-center opacity-50 text-xs md:mb-2 lg:mb-6">
           <div className="flex gap-x-4 mb-2">
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
+            <Link to="#">Terms & Conditions</Link>
+            <Link to="#">Privacy Policy</Link>
           </div>
           <div className="font-medium mb-1">&copy FTM 2021</div>
         </div>
