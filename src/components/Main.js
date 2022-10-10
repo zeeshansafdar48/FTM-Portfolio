@@ -162,10 +162,10 @@ function Main() {
             <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl">
               How I'll{' '}
               <div className="relative inline-block z-20">
-                <div className="relative z-10">Grow</div>
+                <div className="relative z-10">Help</div>
                 <div className="absolute bottom-1 bg-accent h-3 w-full transform -rotate-6"></div>
               </div>{' '}
-              Your Business
+              in Your Business
             </h2>
 
             <div className="text-left mt-10 grid gap-y-12 md:grid-cols-2 md:gap-x-12 md:px-16 lg:gap-x-20 lg:mt-16">
@@ -198,10 +198,40 @@ function Main() {
                 </h3>
 
                 <p className="leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio et
-                  scelerisque id arcu risus etiam metus. Arcu, mauris arcu morbi placerat in cursus
-                  dictum et. Mattis blandit lectus nisl gravida magna augue placerat nunc. Non orci
-                  venenatis tortor nunc, dui sed hendrerit scelerisque eu.
+					        Good design’s not about what medium you’re working in. It’s about thinking hard about what you want to do and what you have to work with before you start. Because Information is only useful when it can be understood.
+                </p>
+              </div>
+              
+              <div>
+                <div>
+                  <svg
+                    className="-ml-2"
+                    width="48"
+                    height="49"
+                    viewBox="0 0 48 49"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M37.7129 15.3792C40.775 19.5094 43.3937 24.3272 42.2659 29.2669C41.17 34.0667 36.9238 37.3506 32.3181 39.0086C28.332 40.4436 24.275 38.7064 20.2512 37.192C15.5247 35.4132 9.87798 34.4405 7.84205 29.7972C5.51318 24.4857 6.61476 18.2113 9.89123 13.564C13.2991 8.7304 18.8563 5.33752 24.8129 5.72616C30.3896 6.09 34.3437 10.8348 37.7129 15.3792Z"
+                      fill="#E0082D"
+                      fillOpacity="0.08"
+                    />
+                    <path
+                      d="M27.1089 15V34L31.7107 30.1311V17.641L27.1089 15ZM24.9697 29.8503L21.2662 31.5573V16.6518L24.9697 17.8084V29.8503ZM16.2921 29.4109L19.1248 28.6224V19.1076L16.3033 18.6278L16.2921 29.4109Z"
+                      fill="#E0082D"
+                    />
+                  </svg>
+                </div>
+
+                <h3 className="mb-2 font-medium">
+                  <b className="font-black">Build Features</b> that matter
+                </h3>
+
+                <p className="leading-relaxed">
+                  A business or a product isn’t really a business or a product unless it does something valuable. The quickest way to failure is to build something nobody wants, needs or cares about. Features should be little bundles of value. In order to create value in digital products, you need features.
                 </p>
               </div>
 
@@ -250,50 +280,14 @@ function Main() {
                 </div>
 
                 <h3 className="mb-2 font-medium">
-                  <b className="font-black">Social Media</b> to attract crowds
+                  Maintain your <b className="font-black">Successful Website</b>
                 </h3>
 
                 <p className="leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio et
-                  scelerisque id arcu risus etiam metus. Arcu, mauris arcu morbi placerat in cursus
-                  dictum et. Mattis blandit lectus nisl gravida magna augue placerat nunc. Non orci
-                  venenatis tortor nunc, dui sed hendrerit scelerisque eu.
-                </p>
-              </div>
-
-              <div>
-                <div>
-                  <svg
-                    className="-ml-2"
-                    width="48"
-                    height="49"
-                    viewBox="0 0 48 49"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M37.7129 15.3792C40.775 19.5094 43.3937 24.3272 42.2659 29.2669C41.17 34.0667 36.9238 37.3506 32.3181 39.0086C28.332 40.4436 24.275 38.7064 20.2512 37.192C15.5247 35.4132 9.87798 34.4405 7.84205 29.7972C5.51318 24.4857 6.61476 18.2113 9.89123 13.564C13.2991 8.7304 18.8563 5.33752 24.8129 5.72616C30.3896 6.09 34.3437 10.8348 37.7129 15.3792Z"
-                      fill="#E0082D"
-                      fillOpacity="0.08"
-                    />
-                    <path
-                      d="M27.1089 15V34L31.7107 30.1311V17.641L27.1089 15ZM24.9697 29.8503L21.2662 31.5573V16.6518L24.9697 17.8084V29.8503ZM16.2921 29.4109L19.1248 28.6224V19.1076L16.3033 18.6278L16.2921 29.4109Z"
-                      fill="#E0082D"
-                    />
-                  </svg>
-                </div>
-
-                <h3 className="mb-2 font-medium">
-                  <b className="font-black">Build Features</b> that matter
-                </h3>
-
-                <p className="leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio et
-                  scelerisque id arcu risus etiam metus. Arcu, mauris arcu morbi placerat in cursus
-                  dictum et. Mattis blandit lectus nisl gravida magna augue placerat nunc. Non orci
-                  venenatis tortor nunc, dui sed hendrerit scelerisque eu.
+                  A successful website does three things:<br />
+                  It attracts the right kinds of visitors.<br />
+                  Guides them to the main services or product you offer.<br />
+                  Collect Contact details for future ongoing relation
                 </p>
               </div>
 
@@ -322,14 +316,12 @@ function Main() {
                 </div>
 
                 <h3 className="mb-2 font-medium">
-                  <b className="font-black">Designs</b> that impress
+                  <b className="font-black">Secure</b> your business
                 </h3>
 
                 <p className="leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio et
-                  scelerisque id arcu risus etiam metus. Arcu, mauris arcu morbi placerat in cursus
-                  dictum et. Mattis blandit lectus nisl gravida magna augue placerat nunc. Non orci
-                  venenatis tortor nunc, dui sed hendrerit scelerisque eu.
+                  Keeping your website secure is a crucial step in ensuring that the technology you use is safe. The longer you let your website go between updates, the more time attackers have to find vulnerabilities in the applications.
+                  Let us help you to secure your website.
                 </p>
               </div>
             </div>
