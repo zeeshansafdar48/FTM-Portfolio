@@ -292,24 +292,21 @@ function Header() {
               </Link>
             </li>
           </div>
-
-          <div className="inline-block relative">
-            <li className="relative">
-              {isHomePage && (
+          {isHomePage && (
+            <div className="inline-block relative">
+              <li className="relative">
                 <a href="#testimonials" className="inline-block h-full w-full">
                   Testimonials
                 </a>
-              )}
-            </li>
-          </div>
+              </li>
+            </div>
+          )}
 
           <div className="inline-block relative">
             <li className="relative">
-              {isHomePage && (
-                <Link to="/experiences" className="inline-block h-full w-full">
-                  Experiences
-                </Link>
-              )}
+              <Link to="/experiences" className="inline-block h-full w-full">
+                Experiences
+              </Link>
             </li>
           </div>
         </div>

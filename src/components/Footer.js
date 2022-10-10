@@ -51,25 +51,21 @@ function Footer() {
               </li>
               <div className="absolute bottom-0 h-1 w-full bg-accent hidden md:absolute lg:hidden"></div>
             </div>
-
+            {isHomePage && (
+              <div className="inline-block relative">
+                <li className="relative z-10 text-sm font-medium lg:text-base lg:font-normal lg:hover:underline">
+                  <a href="#testimonials" className="inline-block h-full w-full">
+                    Testimonials
+                  </a>    
+                </li>
+                <div className="absolute bottom-0 h-1 w-full bg-accent hidden md:absolute lg:hidden"></div>
+              </div>
+            )}
             <div className="inline-block relative">
               <li className="relative z-10 text-sm font-medium lg:text-base lg:font-normal lg:hover:underline">
-              {isHomePage && (
-                <a href="#testimonials" className="inline-block h-full w-full">
-                  Testimonials
-                </a>
-              )}
-              </li>
-              <div className="absolute bottom-0 h-1 w-full bg-accent hidden md:absolute lg:hidden"></div>
-            </div>
-
-            <div className="inline-block relative">
-              <li className="relative z-10 text-sm font-medium lg:text-base lg:font-normal lg:hover:underline">
-              {isHomePage && (
-                <a href="#experience" className="inline-block h-full w-full">
+                <Link to="/experiences" className="inline-block h-full w-full">
                   Experience
-                </a>
-              )}
+                </Link>
               </li>
               <div className="absolute bottom-0 h-1 w-full bg-accent hidden md:absolute lg:hidden"></div>
             </div>
