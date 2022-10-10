@@ -1,5 +1,8 @@
 import React from 'react';
-
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import MyTextInput from '../FormikForm/MyTextInput';
+import Results from '../FormikForm/Results';
 function Contact() {
   return (
     <div>
@@ -132,8 +135,92 @@ function Contact() {
                     <span className="inline-block w-full text-sm mb-4 text-gray-400 text-center md:text-left">
                       Feel free to send us a message and we’ll get back to you.
                     </span>
+                    <Formik
+                      initialValues={{
+                        firstName: '',
+                        email: '',
+                        question:''
+                      }}
 
-                    <form
+                      validationSchema={Yup.object({
+                        firstName: Yup.string()
+                          .max(15, 'Must be 15 characters or less')
+                          .required('Required'),
+                        email: Yup.string()
+                          .email('Invalid email address')
+                          .required('Required'),
+                          question: Yup.string()
+                          .max(15, "Must be 15 characters or less")
+                          .required("Required"),
+                      })}
+                      onSubmit={(values, { setSubmitting, resetForm }) => {
+                        setTimeout(() => {
+                          setSubmitting(false);
+                          resetForm();
+                        }, 400);
+
+                        Results.post('./marks.json', values).then(response => {
+                        }).catch((error) => {
+                          console.log(error)
+                        })
+
+                      }}
+                    >
+
+                      <div className="mt-6 md:h-full md:flex md:flex-col md:gap-y-6">
+                        <Form>
+                          <div className="mt-6 md:h-full md:flex md:flex-col md:gap-y-6">
+                            <div className="border-2 py-3 px-2 mb-4 border-black md:mb-0">
+                              <MyTextInput
+                                name="firstName"
+                                type="text"
+                                placeholder="Name..."
+                                id="firstName"
+                              />
+                            </div>
+                            <div className="border-2 py-3 px-2 mb-4 border-black md:mb-0">
+                              <MyTextInput
+                                name="email"
+                                type="email"
+                                placeholder="Email..."
+                                id="email"
+                              />
+                            </div>
+
+                            <div className="border-2 py-3 px-2 mb-8 border-black md:mb-0">
+                              <textarea
+                                className="h-full bg-transparent placeholder-black"
+                                name="question"
+                                placeholder="Your Question"
+                                id="question"
+                                type="textarea"
+                                cols="30"
+                                rows="3"
+                                minLength="10"
+                                maxLength="100"
+                                required
+                              ></textarea>
+                            </div>
+
+
+                            <div className='form-submit'>
+                              <div className="Contact-btn">
+                                <button type="submit">Submit</button>
+                              </div>
+                              <div className="Contact-btn-reset">
+                                <button type="reset">Reset</button>
+                              </div>
+                              <div>
+                                {/* <a href="">Other Page</a> */}
+                              </div>
+
+                            </div>
+                          </div>
+                        </Form>
+                      </div>
+                    </Formik>
+
+                    {/* <form
                       name="contact"
                       data-netlify="true"
                       autoComplete="off"
@@ -210,7 +297,7 @@ function Contact() {
                           Please try again.
                         </span>
                       </div>
-                    </form>
+                    </form> */}
                   </div>
                 </div>
               </div>
