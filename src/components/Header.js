@@ -306,9 +306,9 @@ function Header() {
           <div className="inline-block relative">
             <li className="relative">
               {isHomePage && (
-                <a href="#experience" className="inline-block h-full w-full">
-                  Experience
-                </a>
+                <Link to="/experiences" className="inline-block h-full w-full">
+                  Experiences
+                </Link>
               )}
             </li>
           </div>
