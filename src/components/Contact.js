@@ -66,7 +66,7 @@ function Contact() {
                     <div>
                       <span className="block text-xs text-gray-500">Telephone Number</span>
                       <span className="block font-medium text-gray-800 text-sm md:text-base">
-                        (+27) 81 343 4552
+                        (+92) 304 1479340
                       </span>
                     </div>
                   </div>
@@ -87,7 +87,7 @@ function Contact() {
                     <div>
                       <span className="block text-xs text-gray-500">Email Address</span>
                       <span className="block font-medium text-gray-800 text-sm md:text-base">
-                        decks@business.com
+                        zeeshan7826@gmail.com
                       </span>
                     </div>
                   </div>
@@ -120,7 +120,7 @@ function Contact() {
                     <div>
                       <span className="block text-xs text-gray-500">Physical Address</span>
                       <span className="block font-medium text-gray-800 text-sm md:text-base">
-                        3 Abbey Rd, London, United Kingdom
+                        Lahore, Pakistan
                       </span>
                     </div>
                   </div>
