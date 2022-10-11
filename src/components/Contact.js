@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import MyTextInput from '../FormikForm/MyTextInput';
 import Results from '../FormikForm/Results';
+import MyTextArea from '../FormikForm/MyTextArea';
 function Contact() {
   return (
     <div>
@@ -139,7 +140,7 @@ function Contact() {
                       initialValues={{
                         firstName: '',
                         email: '',
-                        question:''
+                        question: ''
                       }}
 
                       validationSchema={Yup.object({
@@ -149,8 +150,8 @@ function Contact() {
                         email: Yup.string()
                           .email('Invalid email address')
                           .required('Required'),
-                          question: Yup.string()
-                          .max(15, "Must be 15 characters or less")
+                        question: Yup.string()
+                          .min(15, "Must be 15 characters or less")
                           .required("Required"),
                       })}
                       onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -170,7 +171,7 @@ function Contact() {
                       <div className="mt-6 md:h-full md:flex md:flex-col md:gap-y-6">
                         <Form>
                           <div className="mt-6 md:h-full md:flex md:flex-col md:gap-y-6">
-                            <div className="border-2 py-3 px-2 mb-4 border-black md:mb-0">
+                            <div className="inputMian">
                               <MyTextInput
                                 name="firstName"
                                 type="text"
@@ -178,7 +179,8 @@ function Contact() {
                                 id="firstName"
                               />
                             </div>
-                            <div className="border-2 py-3 px-2 mb-4 border-black md:mb-0">
+                            
+                            <div className="inputMian">
                               <MyTextInput
                                 name="email"
                                 type="email"
@@ -187,19 +189,12 @@ function Contact() {
                               />
                             </div>
 
-                            <div className="border-2 py-3 px-2 mb-8 border-black md:mb-0">
-                              <textarea
-                                className="h-full bg-transparent placeholder-black"
+                            <div className="inputMian">
+                              <MyTextArea
                                 name="question"
+                                rows="6"
                                 placeholder="Your Question"
-                                id="question"
-                                type="textarea"
-                                cols="30"
-                                rows="3"
-                                minLength="10"
-                                maxLength="100"
-                                required
-                              ></textarea>
+                              />
                             </div>
 
 
