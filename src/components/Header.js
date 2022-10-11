@@ -105,7 +105,7 @@ function Header() {
           <div className="absolute grid grid-cols-3 w-full place-items-center pt-4">
             <div className=" col-start-2 col-end-3">
               <a href="/" className="inline-block">
-                <svg
+                {/* <svg
                   className="w-24"
                   width="83"
                   height="29"
@@ -131,7 +131,8 @@ function Header() {
                     d="M45.0293 16.3359H39.502V22H36.0742V7.78125H45.5859V10.4277H39.502V13.6992H45.0293V16.3359ZM61.3691 10.4277H57.1016V22H53.6738V10.4277H49.4844V7.78125H61.3691V10.4277ZM70.3262 7.78125L73.5 17.6738L76.6641 7.78125H81.1758V22H77.7383V18.6797L78.0703 11.8828L74.6328 22H72.3672L68.9199 11.873L69.252 18.6797V22H65.8242V7.78125H70.3262Z"
                     fill="#777676"
                   />
-                </svg>
+                </svg> */}
+                Zeeshan
               </a>
             </div>
 
@@ -244,9 +245,9 @@ function Header() {
         role="navigation"
         className="hidden px-8 md:flex md:justify-center md:gap-x-32 md:mt-4 xl:max-w-screen-2xl xl:mx-auto"
       >
-        <div>
+        <div className='mt-2'>
           <Link to="/" className="inline-block h-full w-full">
-            <svg
+            {/* <svg
               className="w-24 xl:w-32"
               width="83"
               height="29"
@@ -272,26 +273,33 @@ function Header() {
                 d="M45.0293 16.3359H39.502V22H36.0742V7.78125H45.5859V10.4277H39.502V13.6992H45.0293V16.3359ZM61.3691 10.4277H57.1016V22H53.6738V10.4277H49.4844V7.78125H61.3691V10.4277ZM70.3262 7.78125L73.5 17.6738L76.6641 7.78125H81.1758V22H77.7383V18.6797L78.0703 11.8828L74.6328 22H72.3672L68.9199 11.873L69.252 18.6797V22H65.8242V7.78125H70.3262Z"
                 fill="#777676"
               />
-            </svg>
+            </svg> */}
+            <img
+                width="102"
+                height="40"
+                src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                alt="Zeeshan"
+              />
           </Link>
         </div>
 
         <div className="list-none flex justify-center items-center gap-x-8 text-xs opacity-60 font-medium xl:text-sm xl:gap-x-12 xl:pl-10">
-          <div className="inline-block relative">
+          {/* <div className="inline-block relative">
             <li className="relative">
               <Link to="/services" className="inline-block h-full w-full">
                 Services
               </Link>
             </li>
-          </div>
+          </div> */}
 
           <div className="inline-block relative">
             <li className="relative">
-              <Link to="/contact" className="inline-block h-full w-full">
-                Contact
+              <Link to="/portfolio" className="inline-block h-full w-full">
+                Portfolio
               </Link>
             </li>
           </div>
+
           {isHomePage && (
             <div className="inline-block relative">
               <li className="relative">
@@ -304,8 +312,8 @@ function Header() {
 
           <div className="inline-block relative">
             <li className="relative">
-              <Link to="/experiences" className="inline-block h-full w-full">
-                Experiences
+              <Link to="/contact" className="inline-block h-full w-full">
+                Contact
               </Link>
             </li>
           </div>

@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 function Experiences() {
+
+  const location = useLocation();
+  const isHomePage = location?.pathname === '/' ? true : false;
 
   return (
     <section
@@ -27,9 +32,9 @@ function Experiences() {
           <div className="py-12 md:pt-16 lg:grid lg:grid-cols-2 lg:gap-x-16 lg:h-96 lg:py-0 lg:mt-24 lg:mb-32">
             <div className="lg:relative lg:pb-2/3">
               <img
-                className="shadow-lg md:w-full lg:h-full lg:object-cover lg:object-top lg:absolute"
-                src={`${process.env.PUBLIC_URL}/assets/images/project-1.png`}
-                alt="Example page from project"
+                className="rounded-2xl shadow-lg md:w-full lg:h-full lg:object-cover lg:object-top lg:absolute"
+                src={`${process.env.PUBLIC_URL}/assets/images/project-starzplay.png`}
+                alt="StarzPlay"
               />
             </div>
 
@@ -37,25 +42,20 @@ function Experiences() {
               <div className="lg:grid lg:auto-rows-min">
                 <div className="inline-block relative">
                   <div className="lg:relative lg:inline-block">
-                    <h3 className="relative z-10 font-bold pt-8 md:text-xl">Project Name</h3>
+                    <h3 className="relative z-10 font-bold pt-8 md:text-xl">StarzPlay</h3>
                     <div className="absolute bottom-0 h-2 w-full bg-accent"></div>
                   </div>
                 </div>
 
                 <p className="py-4 text-sm leading-relaxed md:text-base lg:py-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh gravida gravida
-                  elementum consectetur facilisis vel quam ullamcorper. Condimentum sed
-                  ultricies tellus et augue. Lacus eu lobortis scelerisque vitae et. Vestibulum
-                  arcu maecenas imperdiet egestas lectus.
+                STARZ PLAY is a subscription video on demand (SVOD) service that streams thousands of blockbuster Hollywood movies, TV shows, documentaries, kid's entertainment and same-day-as-the-US series – plus dedicated Arabic and Bollywood content – to 19 countries across the Middle East and North Africa.
                 </p>
 
-                <span className="inline-block italic opacity-80 text-sm mb-8">
-                  projectname.co.za - Design + Code + Marketing
-                </span>
                 <br className="lg:hidden" />
 
                 <a
-                  href="#"
+                  href="https://starzplay.com/landing"
+                  target={"_blank"}
                   className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md ml-auto lg:ml-0 lg:w-max"
                 >
                   <span className="text-sm opacity-75">Visit Project</span>
@@ -67,9 +67,9 @@ function Experiences() {
           <div className="py-12 md:pt-16 lg:grid lg:grid-cols-2 lg:gap-x-16 lg:h-96 lg:py-0 lg:my-32">
             <div className="lg:relative lg:pb-2/3 lg:col-start-2">
               <img
-                className="shadow-lg md:w-full lg:h-full lg:object-cover lg:object-top lg:absolute z-10"
-                src={`${process.env.PUBLIC_URL}/assets/images/project-2.png`}
-                alt="Example page from project"
+                className="rounded-2xl shadow-lg md:w-full lg:h-full lg:object-cover lg:object-top lg:absolute z-10"
+                src={`${process.env.PUBLIC_URL}/assets/images/project-mattressfirm.png`}
+                alt="Mattressfirm"
               />
               <img
                 className="hidden z-0 lg:inline-block lg:absolute lg:right-20 lg:transform lg:scale-105"
@@ -82,25 +82,102 @@ function Experiences() {
               <div className="lg:grid lg:auto-rows-min">
                 <div className="inline-block relative">
                   <div className="lg:relative lg:inline-block">
-                    <h3 className="relative z-10 font-bold pt-8 md:text-xl">Project Name</h3>
+                    <h3 className="relative z-10 font-bold pt-8 md:text-xl">Mattressfirm</h3>
                     <div className="absolute bottom-0 h-2 w-full bg-accent"></div>
                   </div>
                 </div>
 
                 <p className="py-4 text-sm leading-relaxed md:text-base lg:py-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh gravida gravida
-                  elementum consectetur facilisis vel quam ullamcorper. Condimentum sed
-                  ultricies tellus et augue. Lacus eu lobortis scelerisque vitae et. Vestibulum
-                  arcu maecenas imperdiet egestas lectus.
+                  MattressFirm.com is wholly owned and operated by Mattress Firm, Inc., 10201 S. Main St. Houston, TX <br />
+                  An E-commerce websites for House hold things like Mattresses, Bedding, Furniture & More.
                 </p>
 
-                <span className="inline-block italic opacity-80 text-sm mb-8">
-                  projectname.co.za - Design + Code + Marketing
-                </span>
                 <br className="lg:hidden" />
 
                 <a
-                  href="#"
+                  href="https://www.mattressfirm.com/"
+                  target={"_blank"}
+                  className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md ml-auto lg:ml-0 lg:w-max"
+                >
+                  <span className="text-sm opacity-75">Visit Project</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="py-12 md:pt-16 lg:grid lg:grid-cols-2 lg:gap-x-16 lg:h-96 lg:py-0 lg:mt-24 lg:mb-32">
+            <div className="lg:relative lg:pb-2/3">
+              <img
+                className="rounded-2xl shadow-lg md:w-full lg:h-full lg:object-cover lg:object-top lg:absolute"
+                src={`${process.env.PUBLIC_URL}/assets/images/project-1.png`}
+                alt="Mostly Paws"
+              />
+            </div>
+
+            <div className="lg:h-full lg:flex lg:items-center">
+              <div className="lg:grid lg:auto-rows-min">
+                <div className="inline-block relative">
+                  <div className="lg:relative lg:inline-block">
+                    <h3 className="relative z-10 font-bold pt-8 md:text-xl">Mostly Paws</h3>
+                    <div className="absolute bottom-0 h-2 w-full bg-accent"></div>
+                  </div>
+                </div>
+
+                <p className="py-4 text-sm leading-relaxed md:text-base lg:py-6">
+                  This is a single page static website for showing love with dogs and 
+                  are committed to mission to raise funds for animals in need.
+                  Mainly for making new cool stuff for pet lovers. Also take pride in creating cool merchandise for dog lovers, 
+                  Always wanted to do something in return for our furry friends.
+                </p>
+
+                <br className="lg:hidden" />
+
+                <a
+                  href="https://mostly-paws.netlify.app/"
+                  target={"_blank"}
+                  className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md ml-auto lg:ml-0 lg:w-max"
+                >
+                  <span className="text-sm opacity-75">Visit Project</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {!isHomePage && <Fragment>
+            <div className="py-12 md:pt-16 lg:grid lg:grid-cols-2 lg:gap-x-16 lg:h-96 lg:py-0 lg:my-32">
+            <div className="lg:relative lg:pb-2/3 lg:col-start-2">
+              <img
+                className="rounded-2xl shadow-lg md:w-full lg:h-full lg:object-cover lg:object-top lg:absolute z-10"
+                src={`${process.env.PUBLIC_URL}/assets/images/project-2.png`}
+                alt="Lucid Land"
+              />
+              <img
+                className="hidden z-0 lg:inline-block lg:absolute lg:right-20 lg:transform lg:scale-105"
+                src={`${process.env.PUBLIC_URL}/assets/images/accent2_bubble.png`}
+                alt="Red decorative bubble."
+              />
+            </div>
+
+            <div className="lg:h-full lg:flex lg:items-center lg:row-start-1">
+              <div className="lg:grid lg:auto-rows-min">
+                <div className="inline-block relative">
+                  <div className="lg:relative lg:inline-block">
+                    <h3 className="relative z-10 font-bold pt-8 md:text-xl">Lucid Land</h3>
+                    <div className="absolute bottom-0 h-2 w-full bg-accent"></div>
+                  </div>
+                </div>
+
+                <p className="py-4 text-sm leading-relaxed md:text-base lg:py-6">
+                  A simple static website of play to earn game. Lucid Lands is the first decentralized NFT play-to-earn game on BSC network 
+                  that integrates both 3D-animated gaming NFT and 2D unique computer-generated collective NFT marketplace.
+                  Each unique NFT Heroes will hold its intrinsic value complimenting the rarity, which can be traded in the marketplace.
+                </p>
+
+                <br className="lg:hidden" />
+
+                <a
+                  href="https://lucid-land.netlify.app/"
+                  target={"_blank"}
                   className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md ml-auto lg:ml-0 lg:w-max"
                 >
                   <span className="text-sm opacity-75">Visit Project</span>
@@ -112,9 +189,9 @@ function Experiences() {
           <div className="py-12 md:pt-16 lg:grid lg:grid-cols-2 lg:gap-x-16 lg:h-96 lg:py-0 lg:my-32">
             <div className="lg:relative lg:pb-2/3">
               <img
-                className="shadow-lg md:w-full lg:h-full lg:object-cover lg:object-top lg:absolute"
+                className="rounded-2xl shadow-lg md:w-full lg:h-full lg:object-cover lg:object-top lg:absolute"
                 src={`${process.env.PUBLIC_URL}/assets/images/project-3.png`}
-                alt="Example page from project"
+                alt="Agent Optix"
               />
             </div>
 
@@ -122,25 +199,20 @@ function Experiences() {
               <div className="lg:grid lg:auto-rows-min">
                 <div className="inline-block relative">
                   <div className="lg:relative lg:inline-block">
-                    <h3 className="relative z-10 font-bold pt-8 md:text-xl">Project Name</h3>
+                    <h3 className="relative z-10 font-bold pt-8 md:text-xl">Agent Optix</h3>
                     <div className="absolute bottom-0 h-2 w-full bg-accent"></div>
                   </div>
                 </div>
 
                 <p className="py-4 text-sm leading-relaxed md:text-base lg:py-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh gravida gravida
-                  elementum consectetur facilisis vel quam ullamcorper. Condimentum sed
-                  ultricies tellus et augue. Lacus eu lobortis scelerisque vitae et. Vestibulum
-                  arcu maecenas imperdiet egestas lectus.
+                  A full service digital marketing agency located in Knoxville, TN. This application create custom, digital content that engages audiences and instigates growth.
                 </p>
 
-                <span className="inline-block italic opacity-80 text-sm mb-8">
-                  projectname.co.za - Design + Code + Marketing
-                </span>
                 <br className="lg:hidden" />
 
                 <a
-                  href="#"
+                  href="https://agentoptix.netlify.app/"
+                  target={"_blank"}
                   className="inline-block uppercase font-medium bg-accent px-4 py-2 text-black shadow-md ml-auto lg:ml-0 lg:w-max"
                 >
                   <span className="text-sm opacity-75">Visit Project</span>
@@ -148,6 +220,8 @@ function Experiences() {
               </div>
             </div>
           </div>
+          </Fragment>}
+          
         </div>
 
         <img
