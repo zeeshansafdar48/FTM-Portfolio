@@ -1,7 +1,7 @@
 import React from "react";
+import { useField } from "formik";
 
-import { Formik,Form,useField} from "formik";
-const MyTextArea = ({label, ...props}) => {
+const MyTextArea = ({ label, ...props }) => {
 
     const [field, meta] = useField(props);
     return (
@@ -13,6 +13,6 @@ const MyTextArea = ({label, ...props}) => {
             ) : null}
         </>
     );
-  };
+};
 
-  export default MyTextArea;
+export default MyTextArea;
