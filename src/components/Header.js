@@ -243,7 +243,7 @@ function Header() {
 
       <nav
         role="navigation"
-        className="hidden px-8 md:flex md:justify-center md:gap-x-32 md:mt-4 xl:max-w-screen-2xl xl:mx-auto"
+        className="hidden items-center px-8 md:flex md:justify-center md:gap-x-32 md:mt-4 xl:max-w-screen-2xl xl:mx-auto"
       >
         <div className='mt-2'>
           <Link to="/" className="inline-block h-full w-full">
@@ -277,7 +277,7 @@ function Header() {
             <img
                 width="102"
                 height="40"
-                src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}
                 alt="Zeeshan"
               />
           </Link>
