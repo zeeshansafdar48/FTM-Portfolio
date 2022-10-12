@@ -9,7 +9,7 @@ function Footer() {
   return (
     <div>
       <footer className="relative z-20 flex flex-col items-center justify-between px-4 pt-6 bg-white md:pt-4 lg:bg-gray-100 lg:shadow-inner">
-        <div className="text-sm list-none w-full max-w-screen-xl md:flex md:flex-row md:justify-between md:items-center md:pb-8 gap-x-8 opacity-75 lg:gap-x-16">
+        <div className="items-center text-sm list-none w-full max-w-screen-xl md:flex md:flex-row md:justify-between md:items-center md:pb-8 gap-x-8 opacity-75 lg:gap-x-16">
           <div className="md:mt-2 mb-4 lg:mt-9 lg:mb-8">
             {/* <Link to="/">
               <svg
@@ -71,7 +71,7 @@ function Footer() {
             <img
                 width="102"
                 height="40"
-                src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}
                 alt="Facebook"
               />
           </Link>
