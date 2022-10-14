@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Zeeshan-Portfolio/static/css/main.6984c6bf.css",
+    "main.js": "/Zeeshan-Portfolio/static/js/main.af9fdd8f.js",
+    "index.html": "/Zeeshan-Portfolio/index.html",
+    "main.6984c6bf.css.map": "/Zeeshan-Portfolio/static/css/main.6984c6bf.css.map",
+    "main.af9fdd8f.js.map": "/Zeeshan-Portfolio/static/js/main.af9fdd8f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6984c6bf.css",
+    "static/js/main.af9fdd8f.js"
+  ]
+}
